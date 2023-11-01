@@ -23,10 +23,11 @@ header {
     top:0;
     right:0;
     height:60px;
-    background-color:#386fe6;
+    background-color:#ff8018;
     display:flex; /* none; */
     justify-content:space-between; /* flex-end; */
     align-items: center;
+    z-index: 2;
 }
 
 header h1 {
@@ -123,7 +124,7 @@ h1, h2 {
     height:50px;
     line-height:50px;
     border-radius:25px;
-    background-color:#386fe6;
+    background-color:#ff8018;
     text-align:center;
     color:#FFF;
     font-size:22px;
@@ -133,7 +134,7 @@ h1, h2 {
 }
 
 .pizza-item a:hover .pizza-item--add {
-    background-color:#386fe6;
+    background-color:#ff8018;
 }
 
 .pizza-item--price {
@@ -167,6 +168,7 @@ h1, h2 {
     justify-content: center;
     align-items: center;
     overflow-y:auto;
+    z-index: 2;
 }
 
 .pizzaWindowBody {
@@ -238,11 +240,11 @@ h1, h2 {
 }
 
 .pizzaInfo--size:hover {
-    background-color:#0026ff;
+    background-color:#ffa600;
 }
 
 .pizzaInfo--size.selected {
-    background-color:#386fe6;
+    background-color:#ff8800;
     color:#FFF;
 }
 
@@ -366,8 +368,8 @@ h1, h2 {
 
 .cart--totalitem {
     padding:15px 0;
-    border-top:1px solid #386fe6;
-    color:#315970;
+    border-top:1px solid #f86b33;
+    color:#ee7f00;
     display:flex;
     justify-content: space-between;
     font-size:15px;
@@ -394,9 +396,176 @@ h1, h2 {
     border:2px solid #63f77c;
     transition: all ease .2s;
 }
-
+.payPizza{
+    height: 300px;
+    width:400px;
+    background-color:#FFF;
+    border-radius:10px;
+    box-shadow:0px 0px 15px #999;
+    display:flex;
+    margin:20px 0px;
+}
 .cart--finalizar:hover {
     background-color:#35af4a;
+}
+.btn-btn-primary{
+    border-radius: 12px;
+    height: 50px;
+    font-size: 20px;
+    width: 100px;
+    color: white;
+    border-style: none;
+    outline: 1;
+    background-color: #1fbe39;
+}
+.btn-btn-secondary{
+    border-radius: 12px;
+    height: 50px;
+    font-size: 20px;
+    width: 200px;
+    color: rgba(0, 0, 0, 0.664);
+    border-style: none;
+    outline: 1;
+    background-color: #ffffff;
+}
+.modal-footer{
+    position: relative;
+    right: 40px;
+    display: flex;
+    flex-direction: row
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:25px;
+  min-height: 100vh;
+  background: linear-gradient(90deg, #2ecc71 60%, #27ae60 40.1%);
+}
+
+.container form{
+  padding:20px;
+  width:700px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+
+.container form .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:15px;
+}
+
+.container form .row .col{
+  flex:1 1 250px;
+}
+
+.container form .row .col .title{
+  font-size: 20px;
+  color:#333;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.container form .row .col .inputBox{
+  margin:15px 0;
+}
+
+.container form .row .col .inputBox span{
+  margin-bottom: 10px;
+  display: block;
+}
+
+.container form .row .col .inputBox input{
+  width: 100%;
+  border:1px solid #ccc;
+  padding:10px 15px;
+  font-size: 15px;
+  text-transform: none;
+}
+
+.container form .row .col .inputBox input:focus{
+  border:1px solid #000;
+}
+
+.container form .row .col .flex{
+  display: flex;
+  gap:15px;
+}
+
+.container form .row .col .flex .inputBox{
+  margin-top: 5px;
+}
+
+.container form .row .col .inputBox img{
+  height: 34px;
+  margin-top: 5px;
+  filter: drop-shadow(0 0 1px #000);
+}
+
+.container form .submit-btn{
+  width: 100%;
+  padding:12px;
+  font-size: 17px;
+  background: #27ae60;
+  color:#fff;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.container form .submit-btn:hover{
+  background: #2ecc71;
+}
+.inputBox{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #00000086;
+}
+input{
+    border-radius: 12px;
+
+}
+.fullContent{
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px;
+}
+#carouselExampleControls{
+    margin-top: 50px;
+}
+.swiper {
+    width: 600px;
+    height: 300px;
+    text-align: center;
+  }
+.swiper-slide{
+    position: relative;
+    top: 90px;
+}
+.swiper-button-prev{
+    color: black;
+    font-size: 10px;
+}
+.swiper-button-next{
+    color: black;
+    font-size: 10px;
+}
+.fullContent{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    left: 60px;
 }
 
 @media (max-width:1000px) {
@@ -426,7 +595,7 @@ h1, h2 {
     aside {
         width:auto;
         position:fixed;
-        left:100vw;
+        left:100vh;
         right:0;
         top:0;
         bottom:0;
@@ -446,6 +615,7 @@ h1, h2 {
     .pizzaWindowArea {
         justify-content:flex-start;
         align-items: flex-start;
+        z-index: 2;
     }
 
     .pizzaWindowBody {
